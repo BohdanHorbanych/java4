@@ -8,6 +8,7 @@ import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.ios.options.XCUITestOptions;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 import io.appium.java_client.service.local.AppiumServiceBuilder;
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -54,8 +55,9 @@ public class SampleAppTest {
     @Test
     public void textFieldTest() {
         // TODO initialise PageView and set "text" to its textField
-
         // TODO assert that textField equals to "text"
+        //Assert.assertEquals(,"text");
+
     }
 
     @AfterClass
