@@ -30,6 +30,7 @@ public class WireMockTest {
         stubFor(proxyAllTo("https://www.google.com").atPriority(1));
     }
 
+
     @AfterClass
     private void tearDown() {
         if (wireMockServer != null) {
