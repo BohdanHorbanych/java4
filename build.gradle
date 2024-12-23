@@ -14,10 +14,16 @@ repositories {
     mavenLocal()
 }
 
-version = '1.0-SNAPSHOT'
-
 dependencies {
-    //add testng dependency
+    implementation 'org.seleniumhq.selenium:selenium-java:4.26.0'
+    implementation 'org.seleniumhq.selenium:selenium-chrome-driver:4.26.0'
+    implementation 'org.seleniumhq.selenium:selenium-remote-driver:4.26.0'
+    //https://bonigarcia.dev/webdrivermanager/
+    //https://github.com/bonigarcia/webdrivermanager
+    implementation ('io.github.bonigarcia:webdrivermanager:5.9.2') {
+        exclude group: 'com.google.guava', module: 'guava'
+    }
+    implementation 'org.testng:testng:7.9.0'
 }
 
 test {

@@ -1,14 +1,17 @@
-package test.java.example;
+package example;
 
 import org.testng.annotations.*;
 
 public class TestClassTwo {
 
-    @Test
     @Parameters({"param1", "param2"})
-    public void testWithXmlParameters(String param1, String param2) {
+    @Test
+    public void testWithXmlParameters(
+            @Optional("DefaultParam1") String param1,
+            @Optional("DefaultParam2") String param2) {
         System.out.println("Parameters from testng.xml: " + param1 + ", " + param2);
     }
+
 
     @Test(dataProvider = "dataProviderMethod")
     public void testWithDataProvider(String param1, int param2) {

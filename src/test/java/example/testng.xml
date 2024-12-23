@@ -2,16 +2,31 @@
 <suite name="TestSuite" parallel="false">
 
     <test name="TestClassOneTest">
+        <groups>
+            <run>
+                <exclude name="setup" />
+            </run>
+        </groups>
         <classes>
             <class name="example.TestClassOne" />
         </classes>
     </test>
 
-    <test name="TestClassTwoTest">
+
+    <test name="TestClassTwo - Tests With XML Parameters">
         <classes>
-            <class name="example.TestClassTwo" />
+            <class name="example.TestClassTwo">
+                <methods>
+                    <include name="testMeanWithXmlParams">
+                        <parameter name="param1" value="ParameterValue1" />
+                        <parameter name="param2" value="ParameterValue2" />
+                    </include>
+                    <include name="testVarianceWithDataProvider"/>
+                </methods>
+            </class>
         </classes>
     </test>
+
 
     <test name="TestClassThreeTest">
         <classes>
